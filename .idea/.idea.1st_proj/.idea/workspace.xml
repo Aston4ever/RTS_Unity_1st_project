@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acb03953-a8cd-4e20-afaf-42a36ec075e5" name="Changes" comment="lesson1 ready" />
+    <list default="true" id="acb03953-a8cd-4e20-afaf-42a36ec075e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.1st_proj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.1st_proj/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DashPack/MoveCube.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DashPack/MoveCube.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +22,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Aston4ever"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8edcfb78-85c5-4a86-90f1-c932833f1b57" />
+        <option name="url" value="https://github.com/Aston4ever/RTS_Unity_1st_project.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/!Projects/1st_proj/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/!Projects/1st_proj/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/!Projects/1st_proj/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DashPack/Scripts/Player/PlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,10 +46,10 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2iPzjJGAcKEd79JFtOCcEKEWzWl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,7 +59,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lesson__1",
+    "git-widget-placeholder": "lesson__2",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -106,7 +122,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719407135124</updated>
-      <workItem from="1719407137080" duration="1598000" />
+      <workItem from="1719407137080" duration="1912000" />
+      <workItem from="1719409864178" duration="250000" />
+      <workItem from="1719410355465" duration="1683000" />
     </task>
     <task id="LOCAL-00001" summary="add GDpack">
       <option name="closed" value="true" />
@@ -124,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719409158795</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="some files">
+      <option name="closed" value="true" />
+      <created>1719409558905</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719409558905</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +170,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lesson_1" />
+                        <option value="lesson_2" />
                       </list>
                     </value>
                   </entry>
@@ -160,6 +186,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add GDpack" />
     <MESSAGE value="lesson1 ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson1 ready" />
+    <MESSAGE value="some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="some files" />
   </component>
 </project>
