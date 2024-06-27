@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,12 @@ public class MoveCube : MonoBehaviour
     [SerializeField] private float speed = 5;
     [SerializeField] private float jump = 10;
 
-    private bool ground = true;
+    [SerializeField] private LayerMask mask;
+
+    [SerializeField] private Vector3 boxOffset = new Vector3( 0, 0.5f, 0 );
+    [SerializeField] private Vector2 boxSize = new Vector2( 0.8f, 0.05f );
+    
+    private bool isGrounded = true;
     private Rigidbody2D rgb;
 
     void Start()
@@ -16,23 +22,23 @@ public class MoveCube : MonoBehaviour
         Physics2D.gravity = new Vector2(0, gravity);
         rgb = GetComponent<Rigidbody2D>();
     }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        ground = true;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        ground = false;
-    }
-
+    
     void Update()
     {
-        rgb.velocity = new Vector2(speed, rgb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space) && ground)
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+    }
+    
+    private void FixedUpdate() {
+        isGrounded = Physics2D.OverlapBox( transform.position - transform.localScale.x * boxOffset, transform.localScale.x * boxSize, 0f, mask );
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
-            rgb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+            rgb.velocity = Vector2.zero;
+            rgb.AddForce(Vector2.up * jump * transform.localScale.x, ForceMode2D.Impulse);
         }
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position - transform.localScale.x *  boxOffset,transform.localScale.x * boxSize);
     }
 }
