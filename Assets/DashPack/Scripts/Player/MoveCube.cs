@@ -9,6 +9,8 @@ public class MoveCube : MonoBehaviour
     [SerializeField] private float speed = 5;
     [SerializeField] private float jump = 10;
 
+    [SerializeField] private ParticleSystem trailParticles;
+    
     [SerializeField] private LayerMask mask;
 
     [SerializeField] private Vector3 boxOffset = new Vector3( 0, 0.5f, 0 );
@@ -30,11 +32,18 @@ public class MoveCube : MonoBehaviour
     
     private void FixedUpdate() {
         isGrounded = Physics2D.OverlapBox( transform.position - transform.localScale.x * boxOffset, transform.localScale.x * boxSize, 0f, mask );
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
-        {
-            rgb.velocity = Vector2.zero;
-            rgb.AddForce(Vector2.up * jump * transform.localScale.x, ForceMode2D.Impulse);
+
+        if ( isGrounded ) {
+            trailParticles.Play();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rgb.velocity = Vector2.zero;
+                rgb.AddForce(Vector2.up * jump * transform.localScale.x, ForceMode2D.Impulse);
+            }
+        } else {
+            trailParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
+        
     }
 
     private void OnDrawGizmosSelected() {
