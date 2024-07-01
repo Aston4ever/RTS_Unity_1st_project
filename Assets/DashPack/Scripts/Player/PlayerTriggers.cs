@@ -1,14 +1,75 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerTriggers : MonoBehaviour
-{
+public class PlayerTriggers : MonoBehaviour {
+   [SerializeField] private ParticleSystem deathParticles;
+   [SerializeField] private ParticleSystem trailParticles;
+
+   [SerializeField] private Transform portalPos;
+   
+   [SerializeField] private GameObject playerModel;
+
+   private Rigidbody2D rgb;
+   private MoveCube moveCube;
+
+   private void Start() {
+      rgb = GetComponent<Rigidbody2D>();
+      moveCube = GetComponent<MoveCube>();
+   }
+   
    private void OnTriggerEnter2D( Collider2D collision ) {
       if ( collision.tag == "DeadZone" ) {
-         SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
+         if ( moveCube.enabled ) {
+            StartCoroutine( DeathTimer() );
+         }
+      } else if ( collision.tag == "WinZone" ) {
+         if ( moveCube.enabled ) {
+            StartCoroutine( WinTimer() );
+         }
+      }
+       else if (  collision.tag == "Coin" ) {
+         collision.GetComponent<Coin>().TakeCoin();
+         collision.enabled = false;
+       } 
+   }
+   
+   IEnumerator DeathTimer() {
+      moveCube.enabled = false;
+      rgb.constraints = RigidbodyConstraints2D.FreezeAll;
+      playerModel.SetActive(false);
+      
+      trailParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+      deathParticles.Play();
+
+      while ( deathParticles.isPlaying ) {
+         yield return new WaitForEndOfFrame();
+      }
+      SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
+   }
+
+   IEnumerator WinTimer() {
+      moveCube.enabled = false;
+      rgb.constraints = RigidbodyConstraints2D.FreezeAll;
+      trailParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+
+      float timer = 0f;
+
+      while ( timer < 1f ) {
+         playerModel.transform.Rotate(Vector3.back, 225f * Time.deltaTime);
+         timer += Time.deltaTime;
+         yield return new WaitForEndOfFrame();
+      }
+      
+      timer = 0f;
+
+      while ( timer < 2f ) {
+         playerModel.transform.position = Vector3.Lerp( playerModel.transform.position, portalPos.position, Time.deltaTime * 2f );
+         timer += Time.deltaTime;
+         yield return new WaitForEndOfFrame();
       }
    }
 }
