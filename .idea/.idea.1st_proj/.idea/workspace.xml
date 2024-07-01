@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acb03953-a8cd-4e20-afaf-42a36ec075e5" name="Changes" comment="">
+    <list default="true" id="acb03953-a8cd-4e20-afaf-42a36ec075e5" name="Changes" comment="finish lesson 6">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.1st_proj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.1st_proj/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DashPack/Scripts/Player/PlayerTriggers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DashPack/Scripts/Player/PlayerTriggers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_4" />
+        <entry key="$PROJECT_DIR$" value="lesson_5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,11 +42,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/!Projects/1st_proj/Assets/DashPack/Scripts/Player/MoveCube.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/!Projects/1st_proj/Assets/DashPack/Scripts/Player/MoveCube.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/!Projects/1st_proj/Assets/DashPack/Scripts/Player/MoveCube.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/!Projects/1st_proj/Assets/DashPack/Scripts/Player/MoveCube.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DashPack/Scripts/Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DashPack/Scripts/Player/PlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/!Projects/1st_proj/Assets/DashPack/Scripts/Player/PlayerTriggers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/!Projects/1st_proj/Assets/DashPack/Scripts/Player/PlayerTriggers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DashPack/Scripts/Player/PlayerTriggers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/!Projects/1st_proj/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/!Projects/1st_proj/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
@@ -65,27 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lesson__5&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "lesson__6",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\aston\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\aston\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\aston\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\aston\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\aston\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\aston\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.36f1\Editor\Unity.exe" />
@@ -134,7 +135,7 @@
       <updated>1719407135124</updated>
       <workItem from="1719407137080" duration="1598000" />
       <workItem from="1719485146350" duration="2134000" />
-      <workItem from="1719824353039" duration="3141000" />
+      <workItem from="1719824353039" duration="5418000" />
     </task>
     <task id="LOCAL-00001" summary="add GDpack">
       <option name="closed" value="true" />
@@ -160,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719492490217</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish lesson 5">
+      <option name="closed" value="true" />
+      <created>1719832509155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719832509155</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update scene">
+      <option name="closed" value="true" />
+      <created>1719832538563</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719832538563</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +197,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lesson_5" />
+                        <option value="lesson_6" />
                       </list>
                     </value>
                   </entry>
@@ -197,6 +214,9 @@
     <MESSAGE value="add GDpack" />
     <MESSAGE value="lesson1 ready" />
     <MESSAGE value="finish lesson 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish lesson 4" />
+    <MESSAGE value="finish lesson 5" />
+    <MESSAGE value="update scene" />
+    <MESSAGE value="finish lesson 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish lesson 6" />
   </component>
 </project>
