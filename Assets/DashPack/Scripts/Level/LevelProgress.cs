@@ -41,7 +41,7 @@ public class LevelProgress : MonoBehaviour {
     public void SaveProgressWithCoins() {
         SaveProgress();
         if ( coins > PlayerPrefs.GetInt(saveCoinsKey, 0) ) {
-            PlayerPrefs.SetInt( saveProgressKey, coins );
+            PlayerPrefs.SetInt( saveCoinsKey, coins );
             PlayerPrefs.Save();
         }
     }
