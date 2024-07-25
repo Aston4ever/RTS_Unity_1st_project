@@ -6,6 +6,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerTriggers : MonoBehaviour {
+   [SerializeField] private SceneChanger sceneChanger;
+
+   [SerializeField] private LevelProgress levelProgress;
+   
    [SerializeField] private ParticleSystem deathParticles;
    [SerializeField] private ParticleSystem trailParticles;
 
@@ -32,6 +36,7 @@ public class PlayerTriggers : MonoBehaviour {
          }
       }
        else if (  collision.tag == "Coin" ) {
+         levelProgress.AddCoin();
          collision.GetComponent<Coin>().TakeCoin();
          collision.enabled = false;
        } 
@@ -45,10 +50,12 @@ public class PlayerTriggers : MonoBehaviour {
       trailParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
       deathParticles.Play();
 
+      levelProgress.SaveProgress();
+      
       while ( deathParticles.isPlaying ) {
          yield return new WaitForEndOfFrame();
       }
-      SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
+      sceneChanger.ReloadScene();
    }
 
    IEnumerator WinTimer() {
@@ -63,7 +70,7 @@ public class PlayerTriggers : MonoBehaviour {
          timer += Time.deltaTime;
          yield return new WaitForEndOfFrame();
       }
-      
+      levelProgress.SaveProgressWithCoins();
       timer = 0f;
 
       while ( timer < 2f ) {
@@ -71,5 +78,6 @@ public class PlayerTriggers : MonoBehaviour {
          timer += Time.deltaTime;
          yield return new WaitForEndOfFrame();
       }
+      sceneChanger.LoadScene(0);
    }
 }
